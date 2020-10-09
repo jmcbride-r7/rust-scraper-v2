@@ -1,0 +1,16 @@
+[package]
+name = "scraper-v2"
+version = "0.1.0"
+authors = ["jmcbride-r7 <69522964+jmcbride-r7@users.noreply.github.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+reqwest = { version = "0.10.0-alpha.2", features = ["blocking"] }
+select = "*"
+scraper = "*"
+prettytable-rs = "*"
+regex = "1"
+serde = { version = "1.0.104", features = ["derive"] }
+serde_json = "1.0.48"
