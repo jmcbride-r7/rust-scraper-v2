@@ -10,11 +10,16 @@ use std::io::Write;
 use std::fs::OpenOptions;
 use std::path::Path;
 use std::io;
+use std::iter::Filter;
 
 #[derive(Serialize, Deserialize)]
 struct Payload {
     payload_type: String,
     payload_text: String,
+}
+#[derive(Serialize, Deserialize)]
+struct Filters {
+    ignore_text: String,
 }
 
 fn payload_scraper<'a>(url: &String) -> Vec<String> {
@@ -54,9 +59,27 @@ fn parse_json() {
     }
 }
 
+
+fn parse_filtering() -> Vec<String> {
+
+    let mut filtered_payloads = Vec::new();
+
+    let json_file_path = Path::new("ignore.json");
+    let file = File::open(json_file_path).expect("file not found");
+
+    let filters:Vec<Filters> = serde_json::from_reader(file).expect("Error while reading!");
+
+    for filter in filters {
+        filtered_payloads.push(filter.ignore_text);
+    }
+
+    filtered_payloads
+}
+
 fn main() -> std::io::Result<()> {
 
     let mut input_url = String::new();
+    let mut ignore_payloads = parse_filtering();
 
     println!("Enter URL for Scraper: ");
 
@@ -69,12 +92,17 @@ fn main() -> std::io::Result<()> {
     let payload_from_method = payload_scraper(&input_url);
     let mut payload_holder: Vec<Payload> = Vec::new();
 
-    for code in payload_from_method.iter() {
-        let payload = Payload {
-            payload_type: "1".to_string(),
-            payload_text: code.to_string(),
-        };
-        payload_holder.push(payload);
+    for ignored in ignore_payloads.iter() {
+        let mut filtered_payload = ignored;
+        for code in payload_from_method.iter() {
+            if !code.contains(filtered_payload) {
+                let payload = Payload {
+                    payload_type: "1".to_string(),
+                    payload_text: code.to_string(),
+                };
+                payload_holder.push(payload);
+            }
+        }
     }
 
     let json: String = serde_json::to_string(&payload_holder)?;
