@@ -105,7 +105,7 @@ fn main() -> std::io::Result<()> {
         }
     }
 
-    let json: String = serde_json::to_string(&payload_holder)?;
+    let json: String = serde_json::to_string_pretty(&payload_holder)?;
 
     file.write((&json).as_ref()).expect("Unable to write file");
 
