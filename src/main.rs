@@ -11,6 +11,7 @@ struct Payload {
     payload_type: String,
     payload_text: String,
     expected_fail: bool,
+    valid: bool,
 }
 
 #[derive(Serialize, Deserialize)]
@@ -93,6 +94,7 @@ fn main() -> std::io::Result<()> {
                     payload_type: "1".to_string(),
                     payload_text: code.to_string(),
                     expected_fail: false,
+                    valid: true,
                 };
                 payload_holder.push(payload);
             }
