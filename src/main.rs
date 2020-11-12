@@ -4,19 +4,15 @@ extern crate regex;
 
 use scraper::{Html, Selector};
 use serde::{Deserialize, Serialize};
-use std::fs::File;
-use std::io::Read;
-use std::io::Write;
-use std::fs::OpenOptions;
-use std::path::Path;
-use std::io;
-use std::iter::Filter;
+use std::{io::{self, Read, Write}, fs::{File, OpenOptions}, path::Path};
 
 #[derive(Serialize, Deserialize)]
 struct Payload {
     payload_type: String,
     payload_text: String,
+    expected_fail: bool,
 }
+
 #[derive(Serialize, Deserialize)]
 struct Filters {
     ignore_text: String,
@@ -35,7 +31,7 @@ fn payload_scraper<'a>(url: &String) -> Vec<String> {
 
     let mut body = String::new();
     res.read_to_string(&mut body).unwrap();
-    // let mut code_txt = Vec::new();
+
     let mut payload_vector = Vec::new();
     let fragment = Html::parse_document(body.as_str());
     let code_selector = Selector::parse("code").unwrap();
@@ -77,7 +73,7 @@ fn parse_filtering() -> Vec<String> {
 fn main() -> std::io::Result<()> {
 
     let mut input_url = String::new();
-    let mut ignore_payloads = parse_filtering();
+    let ignore_payloads = parse_filtering();
 
     println!("Enter URL for Scraper: ");
 
@@ -87,25 +83,25 @@ fn main() -> std::io::Result<()> {
 
     let mut file = OpenOptions::new().write(true).create(true).open("payload.json").unwrap();
 
-    let payload_from_method = payload_scraper(&input_url);
+    let scraped_payloads = payload_scraper(&input_url);
     let mut payload_holder: Vec<Payload> = Vec::new();
 
     for ignored in ignore_payloads.iter() {
-        let mut filtered_payload = ignored;
-        for code in payload_from_method.iter() {
-            if !code.contains(filtered_payload) {
+        for code in scraped_payloads.iter() {
+            if !code.contains(ignored) {
                 let payload = Payload {
                     payload_type: "1".to_string(),
                     payload_text: code.to_string(),
+                    expected_fail: false,
                 };
                 payload_holder.push(payload);
             }
         }
     }
 
-    let json: String = serde_json::to_string_pretty(&payload_holder)?;
+    let payloads_json: String = serde_json::to_string_pretty(&payload_holder)?;
 
-    file.write((&json).as_ref()).expect("Unable to write file");
+    file.write((&payloads_json).as_ref()).expect("Unable to write file");
 
     parse_json();
 
