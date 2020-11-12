@@ -54,9 +54,7 @@ fn parse_json() {
 
     let payloads:Vec<Payload> = serde_json::from_reader(file).expect("Error while reading!");
 
-    for payload in payloads {
-        println!("Payload: {}", payload.payload_text);
-    }
+
 }
 
 
