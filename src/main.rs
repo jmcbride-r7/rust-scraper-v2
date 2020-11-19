@@ -4,7 +4,7 @@ extern crate regex;
 
 use scraper::{Html, Selector};
 use serde::{Deserialize, Serialize};
-use std::{io::{self, Read, Write}, fs::{File, OpenOptions}, path::Path};
+use std::{io::{Read, Write}, fs::{File, OpenOptions}, path::Path};
 
 #[derive(Serialize, Deserialize)]
 struct Payload {
@@ -44,17 +44,6 @@ fn payload_scraper<'a>(url: &String) -> Vec<String> {
     payload_vector
 }
 
-fn parse_json() {
-
-    let json_file_path = Path::new("payload.json");
-    let file = File::open(json_file_path).expect("file not found");
-
-    let payloads:Vec<Payload> = serde_json::from_reader(file).expect("Error while reading!");
-
-
-}
-
-
 fn parse_filtering() -> Vec<String> {
 
     let mut filtered_payloads = Vec::new();
@@ -73,39 +62,39 @@ fn parse_filtering() -> Vec<String> {
 
 fn main() -> std::io::Result<()> {
 
-    let mut input_url = String::new();
+    let input_url = String::from("https://owasp.org/www-community/xss-filter-evasion-cheatsheet");
     let ignore_payloads = parse_filtering();
-
-    println!("Enter URL for Scraper: ");
-
-    io::stdin()
-        .read_line(&mut input_url)
-        .expect("Failed to read line");
 
     let mut file = OpenOptions::new().write(true).create(true).open("payload.json").unwrap();
 
     let scraped_payloads = payload_scraper(&input_url);
+    println!("num payloads: {}", scraped_payloads.len());
+
     let mut payload_holder: Vec<Payload> = Vec::new();
 
-    for ignored in ignore_payloads.iter() {
-        for code in scraped_payloads.iter() {
-            if !code.contains(ignored) {
-                let payload = Payload {
-                    payload_type: "1".to_string(),
-                    payload_text: code.to_string(),
-                    expected_fail: false,
-                    valid: true,
-                };
-                payload_holder.push(payload);
+    for payload_text in scraped_payloads {
+        let payload = Payload {
+            payload_type: "1".to_string(),
+            payload_text: payload_text.to_string(),
+            expected_fail: false,
+            valid: true,
+        };
+
+        let mut ignore_payload = false;
+
+        for ignore in ignore_payloads.iter() {
+            if ignore.eq(&payload_text) {
+                ignore_payload = true;
             }
+        }
+        if !ignore_payload {
+            payload_holder.push(payload);
         }
     }
 
     let payloads_json: String = serde_json::to_string_pretty(&payload_holder)?;
 
     file.write((&payloads_json).as_ref()).expect("Unable to write file");
-
-    parse_json();
 
     Ok(())
 }
