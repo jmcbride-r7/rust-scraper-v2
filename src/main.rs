@@ -60,21 +60,29 @@ fn parse_filtering() -> Vec<String> {
     filtered_payloads
 }
 
-fn main() -> std::io::Result<()> {
-
-    let input_url = String::from("https://owasp.org/www-community/xss-filter-evasion-cheatsheet");
+fn write_payloads(sensor: &str, url: String, mut output_file: File) {
     let ignore_payloads = parse_filtering();
 
-    let mut file = OpenOptions::new().write(true).create(true).open("payload.json").unwrap();
+    let mut scraped_payloads = payload_scraper(&url);
 
-    let scraped_payloads = payload_scraper(&input_url);
+    if sensor == "cmdi" {
+        println!("Entered cmdi block");
+        let mut payloads = Vec::new();
+        for text in &scraped_payloads {
+            for payload in text.lines() {
+                payloads.push(payload.to_string());
+            }
+        }
+        scraped_payloads = payloads;
+    }
+
     println!("num payloads: {}", scraped_payloads.len());
 
     let mut payload_holder: Vec<Payload> = Vec::new();
 
     for payload_text in scraped_payloads {
         let payload = Payload {
-            payload_type: "1".to_string(),
+            payload_type: "0".to_string(),
             payload_text: payload_text.to_string(),
             expected_fail: false,
             valid: true,
@@ -92,9 +100,21 @@ fn main() -> std::io::Result<()> {
         }
     }
 
-    let payloads_json: String = serde_json::to_string_pretty(&payload_holder)?;
+    let payloads_json: String = serde_json::to_string_pretty(&payload_holder).unwrap();
 
-    file.write((&payloads_json).as_ref()).expect("Unable to write file");
+    output_file.write((&payloads_json).as_ref()).expect("Unable to write file");
 
-    Ok(())
+}
+
+fn main() {
+
+    let xss_url = String::from("https://owasp.org/www-community/xss-filter-evasion-cheatsheet");
+    let xss_file = OpenOptions::new().write(true).create(true).open("xss_payloads.json").unwrap();
+
+    let cmdi_url = String::from("https://github.com/payloadbox/command-injection-payload-list");
+    let cmdi_file = OpenOptions::new().write(true).create(true).open("cmdi_payloads.json").unwrap();
+
+
+    write_payloads("xss", xss_url, xss_file);
+    write_payloads("cmdi", cmdi_url, cmdi_file);
 }
