@@ -39,9 +39,6 @@ fn payload_scraper<'a>(url: &String) -> Vec<String> {
 
     for code_reference in fragment.select(&code_selector) {
         let code_txt = code_reference.text().collect::<Vec<&str>>();
-        //let payload = code_txt[0].to_string();
-        //Remove " " from payloads
-        //payload_vector.push(payload.replace(" ", ""));
         payload_vector.push(code_txt[0].to_string());
     }
     payload_vector
@@ -87,7 +84,6 @@ fn write_payloads(sensor: &str, url: String, mut output_file: File) {
         let payload = Payload {
             payload_type: "0".to_string(),
             payload_text: payload_text.to_string().replace(" ", ""),
-            //payload_text: payload_text.to_string(),
             expected_fail: false,
             valid: true,
         };
@@ -124,15 +120,5 @@ fn main() {
     write_payloads("xss", xss_url, xss_file);
     write_payloads("cmdi", cmdi_url, cmdi_file);
     write_payloads("sqli", sqli_url, sqli_file);
-
-    // let test = " /?id=1+union+select+1,2,3/*";
-    // println!("Before: {}", test);
-    //
-    // let test1 = test.replace(" ", "");
-    // println!("After: {}", test1);
-    //
-    // assert!(test.contains(" "));
-
-
 
 }
