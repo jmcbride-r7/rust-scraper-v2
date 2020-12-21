@@ -48,7 +48,7 @@ fn parse_filtering() -> Vec<String> {
 
     let mut filtered_payloads = Vec::new();
 
-    let json_file_path = Path::new("ignore.json");
+    let json_file_path = Path::new("res/ignore.json");
     let file = File::open(json_file_path).expect("file not found");
 
     let filters:Vec<Filters> = serde_json::from_reader(file).expect("Error while reading!");
@@ -65,7 +65,7 @@ fn write_payloads(sensor: &str, url: String, mut output_file: File) {
 
     let mut scraped_payloads = payload_scraper(&url);
 
-    if sensor == "cmdi" {
+    if sensor != "xss" {
         println!("Entered cmdi block");
         let mut payloads = Vec::new();
         for text in &scraped_payloads {
@@ -83,6 +83,7 @@ fn write_payloads(sensor: &str, url: String, mut output_file: File) {
     for payload_text in scraped_payloads {
         let payload = Payload {
             payload_type: "0".to_string(),
+            //payload_text: payload_text.to_string().replace(" ", ""),
             payload_text: payload_text.to_string(),
             expected_fail: false,
             valid: true,
@@ -109,12 +110,16 @@ fn write_payloads(sensor: &str, url: String, mut output_file: File) {
 fn main() {
 
     let xss_url = String::from("https://owasp.org/www-community/xss-filter-evasion-cheatsheet");
-    let xss_file = OpenOptions::new().write(true).create(true).open("xss_payloads.json").unwrap();
+    let xss_file = OpenOptions::new().write(true).create(true).open("output/xss_payloads.json").unwrap();
 
     let cmdi_url = String::from("https://github.com/payloadbox/command-injection-payload-list");
-    let cmdi_file = OpenOptions::new().write(true).create(true).open("cmdi_payloads.json").unwrap();
+    let cmdi_file = OpenOptions::new().write(true).create(true).open("output/cmdi_payloads.json").unwrap();
 
+    let sqli_url = String::from("https://owasp.org/www-community/attacks/SQL_Injection_Bypassing_WAF");
+    let sqli_file = OpenOptions::new().write(true).create(true).open("output/sqli_payloads.json").unwrap();
 
     write_payloads("xss", xss_url, xss_file);
     write_payloads("cmdi", cmdi_url, cmdi_file);
+    write_payloads("sqli", sqli_url, sqli_file);
+
 }
