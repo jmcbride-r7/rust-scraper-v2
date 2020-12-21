@@ -109,127 +109,127 @@
   },
   {
     "payload_type": "0",
-    "payload_text": "/?id=1+union+select+1,2,3/*",
+    "payload_text": " /?id=1+union+select+1,2,3/*",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "willbesuccessfullyperformed",
+    "payload_text": " will be successfully performed",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "/?id=1/*union*/union/*select*/select+1,2,3/*",
+    "payload_text": " /?id=1/*union*/union/*select*/select+1,2,3/*",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "index.php?id=1/*uniXon*/union/*selXect*/select+1,2,3/*",
+    "payload_text": " index.php?id=1/*uni X on*/union/*sel X ect*/select+1,2,3/*",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "/?id=1+union+select+1,2,3/*",
+    "payload_text": " /?id=1+union+select+1,2,3/*",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "/?id=1+un/**/ion+sel/**/ect+1,2,3--",
+    "payload_text": " /?id=1+un/**/ion+sel/**/ect+1,2,3--",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "SELECT*fromtablewhereid=1unionselect1,2,3--",
+    "payload_text": " SELECT * from table where id =1 union select 1,2,3--",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "/?id=1;select+1,2,3+from+users+where+id=1--",
+    "payload_text": " /?id=1;select+1,2,3+from+users+where+id=1--",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "/?id=1;select+1&id=2,3+from+users+where+id=1--",
+    "payload_text": " /?id=1;select+1&id=2,3+from+users+where+id=1--",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "SQL=\"selectkeyfromtablewhereid=\"+Request.QueryString(\"id\")",
+    "payload_text": " SQL=\" select key from table where id= \"+Request.QueryString(\"id\")",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "/?id=1/**/union/*&id=*/select/*&id=*/pwd/*&id=*/from/*&id=*/users",
+    "payload_text": " /?id=1/**/union/*&id=*/select/*&id=*/pwd/*&id=*/from/*&id=*/users",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "id=1/**/union/*,*/select/*,*/pwd/*,*/from/*,*/users",
+    "payload_text": " id=1/**/union/*,*/select/*,*/pwd/*,*/from/*,*/users",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "Query(\"select*fromtablewherea=\".$_GET['a'].\"andb=\".$_GET['b']);",
+    "payload_text": " Query(\"select * from table where a=\".$_GET['a'].\" and b=\".$_GET['b']);",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "Query(\"select*fromtablewherea=\".$_GET['a'].\"andb=\".$_GET['b'].\"limit\".$_GET['c']);",
+    "payload_text": " Query(\"select * from table where a=\".$_GET['a'].\" and b=\".$_GET['b'].\" limit\".$_GET['c']);",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "/?a=1+union+select+1,2/*",
+    "payload_text": " /?a=1+union+select+1,2/*",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "/?a=1+union/*&b=*/select+1,2",
+    "payload_text": " /?a=1+union/*&b=*/select+1,2",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "/?a=1+union/*&b=*/select+1,pass/*&c=*/from+users--",
+    "payload_text": " /?a=1+union/*&b=*/select+1,pass/*&c=*/from+users--",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "select*fromtablewherea=1union/*andb=*/select1,2",
+    "payload_text": " select * from table where a=1 union/* and b=*/select 1,2",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "select*fromtablewherea=1union/*andb=*/select1,pass/*limit*/fromusers--",
+    "payload_text": " select * from table where a=1 union/* and b=*/select 1,pass/* limit */from users--",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "/?id=1+OR+0x50=0x50",
+    "payload_text": " /?id=1+OR+0x50=0x50",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "/?id=1+and+ascii(lower(mid((select+pwd+from+users+limit+1,1),1,1)))=74",
+    "payload_text": " /?id=1+and+ascii(lower(mid((select+pwd+from+users+limit+1,1),1,1)))=74",
     "expected_fail": false,
     "valid": true
   },
@@ -259,283 +259,283 @@
   },
   {
     "payload_type": "0",
-    "payload_text": "/*!%55NiOn*//*!%53eLEct*/",
+    "payload_text": " /*!%55NiOn*/ /*!%53eLEct*/",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "%55nion(%53elect1,2,3)---",
+    "payload_text": "  %55nion(%53elect 1,2,3)-- -",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "+union+distinct+select+",
+    "payload_text": "  +union+distinct+select+",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "+union+distinctROW+select+",
+    "payload_text": "  +union+distinctROW+select+",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "/**//*!12345UNIONSELECT*//**/",
+    "payload_text": "  /**//*!12345UNION SELECT*//**/",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "concat(0x223e,@@version)",
+    "payload_text": "  concat(0x223e,@@version)",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "concat(0x273e27,version(),0x3c212d2d)",
+    "payload_text": "  concat(0x273e27,version(),0x3c212d2d)",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "concat(0x223e3c62723e,version(),0x3c696d67207372633d22)",
+    "payload_text": "  concat(0x223e3c62723e,version(),0x3c696d67207372633d22)",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "concat(0x223e,@@version,0x3c696d67207372633d22)",
+    "payload_text": "  concat(0x223e,@@version,0x3c696d67207372633d22)",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "concat(0x223e,0x3c62723e3c62723e3c62723e,@@version,0x3c696d67207372633d22,0x3c62​723e)",
+    "payload_text": "  concat(0x223e,0x3c62723e3c62723e3c62723e,@@version,0x3c696d67207372633d22,0x3c62​723e)",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "concat(0x223e3c62723e,@@version,0x3a,”BlackRose”,0x3c696d67207372633d22)",
+    "payload_text": "  concat(0x223e3c62723e,@@version,0x3a,”BlackRose”,0x3c696d67207372633d22)",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "concat(‘’,@@version,’’)",
+    "payload_text": "  concat(‘’,@@version,’’)",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "/**//*!50000UNIONSELECT*//**/",
+    "payload_text": "  /**//*!50000UNION SELECT*//**/",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "/**/UNION/**//*!50000SELECT*//**/",
+    "payload_text": "  /**/UNION/**//*!50000SELECT*//**/",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "/*!50000UniONSeLeCt*/",
+    "payload_text": "  /*!50000UniON SeLeCt*/",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "union/*!50000%53elect*/",
+    "payload_text": "  union /*!50000%53elect*/",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "+#uNiOn+#sEleCt",
+    "payload_text": "  +#uNiOn+#sEleCt",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "+#1q%0AuNiOnall#qa%0A#%0AsEleCt",
+    "payload_text": "  +#1q%0AuNiOn all#qa%0A#%0AsEleCt",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "/*!%55NiOn*//*!%53eLEct*/",
+    "payload_text": "  /*!%55NiOn*/ /*!%53eLEct*/",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "/*!u%6eion*//*!se%6cect*/",
+    "payload_text": "  /*!u%6eion*/ /*!se%6cect*/",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "+un/**/ion+se/**/lect",
+    "payload_text": "  +un/**/ion+se/**/lect",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "uni%0bon+se%0blect",
+    "payload_text": "  uni%0bon+se%0blect",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "%2f**%2funion%2f**%2fselect",
+    "payload_text": "  %2f**%2funion%2f**%2fselect",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "union%23foo*%2F*bar%0D%0Aselect%23foo%0D%0A",
+    "payload_text": "  union%23foo*%2F*bar%0D%0Aselect%23foo%0D%0A",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "REVERSE(noinu)+REVERSE(tceles)",
+    "payload_text": "  REVERSE(noinu)+REVERSE(tceles)",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "/*--*/union/*--*/select/*--*/",
+    "payload_text": "  /*--*/union/*--*/select/*--*/",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "union(/*!/**/SeleCT*/1,2,3)",
+    "payload_text": "  union (/*!/**/ SeleCT */ 1,2,3)",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "/*!union*/+/*!select*/",
+    "payload_text": "  /*!union*/+/*!select*/",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "union+/*!select*/",
+    "payload_text": "  union+/*!select*/",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "/**/union/**/select/**/",
+    "payload_text": "  /**/union/**/select/**/",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "/**/uNIon/**/sEleCt/**/",
+    "payload_text": "  /**/uNIon/**/sEleCt/**/",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "/**//*!union*//**//*!select*//**/",
+    "payload_text": "  /**//*!union*//**//*!select*//**/",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "/*!uNIOn*//*!SelECt*/",
+    "payload_text": "  /*!uNIOn*/ /*!SelECt*/",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "+union+distinct+select+",
+    "payload_text": "  +union+distinct+select+",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "+union+distinctROW+select+",
+    "payload_text": "  +union+distinctROW+select+",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "+UnIOn%0d%0aSeleCt%0d%0a",
+    "payload_text": "  +UnIOn%0d%0aSeleCt%0d%0a",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "UNION/*&test=1*/SELECT/*&pwn=2*/",
+    "payload_text": "  UNION/*&test=1*/SELECT/*&pwn=2*/",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "un?+un/**/ion+se/**/lect+",
+    "payload_text": "  un?+un/**/ion+se/**/lect+",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "+UNunionION+SEselectLECT+",
+    "payload_text": "  +UNunionION+SEselectLECT+",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "+uni%0bon+se%0blect+",
+    "payload_text": "  +uni%0bon+se%0blect+",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "%252f%252a*/union%252f%252a/select%252f%252a*/",
+    "payload_text": "  %252f%252a*/union%252f%252a /select%252f%252a*/",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "/%2A%2A/union/%2A%2A/select/%2A%2A/",
+    "payload_text": "  /%2A%2A/union/%2A%2A/select/%2A%2A/",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "%2f**%2funion%2f**%2fselect%2f**%2f",
+    "payload_text": "  %2f**%2funion%2f**%2fselect%2f**%2f",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "union%23foo*%2F*bar%0D%0Aselect%23foo%0D%0A",
+    "payload_text": "  union%23foo*%2F*bar%0D%0Aselect%23foo%0D%0A",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "/*!UnIoN*/SeLecT+",
+    "payload_text": "  /*!UnIoN*/SeLecT+",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "/*!from*/information_schema.columns/*!where*/column_name%20/*!like*/char(37,%20112,%2097,%20115,%20115,%2037)",
+    "payload_text": "   /*!from*/information_schema.columns/*!where*/column_name%20/*!like*/char(37,%20112,%2097,%20115,%20115,%2037)",
     "expected_fail": false,
     "valid": true
   },
   {
     "payload_type": "0",
-    "payload_text": "unionselect1,2,unhex(hex(Concat(Column_Name,0x3e,Table_schema,0x3e,table_Name))),4,5/*!from*/information_schema.columns/*!where*/column_name%20/*!like*/char(37,%20112,%2097,%20115,%20115,%2037)?",
+    "payload_text": "   union select 1,2,unhex(hex(Concat(Column_Name,0x3e,Table_schema,0x3e,table_Name))),4,5 /*!from*/information_schema.columns/*!where*/column_name%20/*!like*/char(37,%20112,%2097,%20115,%20115,%2037)?",
     "expected_fail": false,
     "valid": true
   },

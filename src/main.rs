@@ -83,7 +83,8 @@ fn write_payloads(sensor: &str, url: String, mut output_file: File) {
     for payload_text in scraped_payloads {
         let payload = Payload {
             payload_type: "0".to_string(),
-            payload_text: payload_text.to_string().replace(" ", ""),
+            //payload_text: payload_text.to_string().replace(" ", ""),
+            payload_text: payload_text.to_string(),
             expected_fail: false,
             valid: true,
         };
